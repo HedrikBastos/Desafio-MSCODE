@@ -12,30 +12,28 @@
 }
 
 :root{ 
-    --cor1: #e71d351e ;
+    --cor1: #131112;
     --cor2: #E28413;
-    --cor3: #bf171e;
+    --cor3: #b91318d8;
     --cor4: #bf171e;
     --cor5: #E71D36;
     --cor0: #FFFFFF;
 
     --fonte-padrao: arial, verdana, serif, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-droid: 'android', cursive;
-
 }
 
 header{
-    font-family: var(--fonte-padrao);
-    font-size: 0.9em;
-    color: white;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.329);
     margin: auto;
     max-width: 600px;
-    padding-left: 10px;
-    padding-right: 10px;
   
 
+}
+
+.navegacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 nav{
     background-color: var(--cor5);
@@ -43,7 +41,7 @@ nav{
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.295);
 }
 nav > a {
-    color: white;
+    color: var(--cor0);
     font-family: var(--fonte-padrao);
     padding: 10px;
     font-weight: bold;
@@ -54,44 +52,38 @@ nav > a:hover{
     background-color: var(--cor3);
     color: var(--cor5);
     border-radius: 5px;
-    transition-duration: 0.5s;
+    transition-duration: 1.0s;
 
 }
-
-a.externo::after{
-    content: '\1F517';
-}
-
 
 h1{
-    color: #0e582f;
-    font-family: var(--fonte-droid);
+    color: var(--cor4);
+    font-family: var(--fonte-destaque);
     font-size: 1.8em;
     font-weight: normal;
 
     
 }
 
-header > h1 {
-    color: white;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
-    font-family: var(--fonte-destaque);
-    font-size: 3em;
-    margin-bottom: 20px;
-    font-weight: normal;
-
-}
-
 main h2{
     font-family: var(--fonte-padrao);
     padding: 10px;
-    color: var(--cor4);
+    color: var(--cor1);
     font-size: 1.3em;
     font-weight: normal;
 
 }
-main{ 
 
+li{
+    font-family: var(--fonte-padrao);
+    padding: 10px;
+    color: var(--cor1);
+    font-size: 1.0em;
+    font-weight: normal;
+   
+}
+main{ 
+    transition: 1s;
     background-color: #EAEAEA;
     min-width: 280px;
     max-width: 850px;
@@ -102,11 +94,6 @@ main{
     box-shadow: 0px 0px 2px black;
     border-bottom-left-radius:10px ;
     border-bottom-right-radius:10px ;
-}
-main img.pqg{
-   max-width: 350px;
-    display: block;
-
 }
 
 main p{
@@ -141,7 +128,7 @@ main strong{
     height: 80px;
     
     max-width: 350px;
-    background: #fff;
+    background: var(--cor0);
     border-radius: 10px;
     padding: 0 65px 0 45px;
     
@@ -163,7 +150,7 @@ main strong{
 .range .valorSlider span{
     position:absolute;
     height: 45px;
-    color: white;
+    color: var(--cor0);
     font-weight: 500;
     top: -40px;
     transform: translateX(-50%) scale(0);
@@ -185,7 +172,7 @@ main strong{
     background:var(--cor5);
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
-    border: 3px solid #fff;
+    border: 3px solid var(--cor0);
     z-index: -1; 
     border-top-left-radius: 50%;
      border-top-right-radius: 50%;
@@ -230,7 +217,7 @@ main .range .field input::-webkit-slider-thumb{
  }
  
 main .range .field input::-moz-range-progress{
-    background: #fff;
+    background: var(--cor0);
 }
 
  .pergunta{ 
@@ -238,12 +225,21 @@ main .range .field input::-moz-range-progress{
  }
 
  input[type=submit]{
-    background-color: #03cb4f;
+    background-color:var(--cor5);
     width: 140px;
     height: 40px;
     font-weight: 500;
-    color: white;
+    color: var(--cor0);
     cursor: pointer;
+}
+input[type=checkbox]{
+    margin-bottom:5px;
+}
+
+ul{
+    list-style-type:none;
+    list-style-position: inside;
+    columns: 2;
 }
 
 textarea{
@@ -266,30 +262,41 @@ aside{
    border-radius: 10px;
    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.308);
 }
-aside > h3{
-    color: #d5ffe8;
-    padding: 10px;
-    background-color: var(--cor5);
-    border-radius: 7px 7px 0px 0px;
-    margin: -10px -10px 0px -10px;
-}
-aside > ul{
-    list-style-type:'\2714\00a0\00a0';
-    list-style-position: inside;
-    columns: 2;
-}
+
+
+  
 
 
 footer{
-    color: white;
-    background-color:var(--cor4);
+    background:var(--cor4);
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    color: var(--cor0);
     text-align: center;
-    bottom: 0%;
-    position: absolute;
-   width: 100%;
-    height: 2.1%;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+footer img{
+    padding-top: -0px;
 }
 
 footer a img{
     width: 50px;
+}
+
+@media  (max-width:500px) {
+    footer{
+        position: relative;
+    }
+}
+
+.check{
+    width: 20px;
+    height: 20px;
 }

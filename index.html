@@ -10,15 +10,22 @@
 </head>
 <body>
    <header>
-        <img src="./imagens/header-logo.png" alt="Móveis Simonetti">
+        <a href="https://www.moveissimonetti.com.br "><img src="./imagens/header-logo.png" alt="Móveis Simonetti"></a>
     </header>
-<nav>
+    <div class="menu" id="menu">
+        <button class="btn-icon">
+            <img src="./icons/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        </button>
+    </div>
+<nav class="navegacao">
     <a href="#">Home</a>
-    <a href="#">Notícias</a>
-    <a href="#">Fale Conosco</a>
+    <a href="https://www.moveissimonetti.com.br/ofertas-da-semana-ms">Ofertas</a>
+    <a href="https://www.moveissimonetti.com.br/ajuda-e-suporte/fale-conosco">Fale Conosco</a>
 </nav>
 
 <main>
+    <div><h1>Pesquisa de Satisfação</h1></div>
+
     <div class="pergunta">
         <h2>1- Em uma escala de 0 a 10, qual a probabilidade de você indicar nossa empresa para um amigo ou familiar?</h2>
 
@@ -28,7 +35,7 @@
             </div>
             <div class="field">
                 <div class="valor left">0</div>
-                    <input type="range" name="" id="" min="0" max="10" value="10" steps="1">
+                    <input type="range" name="" id="nota1" min="0" max="10" value="10" steps="1">
                 <div class="valor right">10</div>
             </div>
     </div>
@@ -36,28 +43,30 @@
     
 
     <div>
-        <h2>2- Como você avalia o atendimento prestado ao       cliente pela nossa empresa?
-            () Muito bom
-            () Bom
-            () Ruim
-            () Muito Ruim</h2>
-    </div>
+        <h2>2- Em comparação com o mercado como você avalia a qualidade dos serviços da nossa empresa?</h2>
+        
+            <ul>
+                <li ><input type="checkbox" class="check" name="" id="muitoBom" onclick="clickbox(muitoBom)">Muito bom</li>
+                <span class="checkMark"></span>
+                <li><input type="checkbox" class="check" name="" id="bom" onclick="clickbox(bom)">Bom</li>
+                <span class="checkMark"></span>
+                <li><input type="checkbox" class="check" name="" id="ruim" onclick="clickbox(ruim)">Ruim</li>
+                <span class="checkMark"></span>
+                <li><input type="checkbox" class="check" name="" id="muitoRuim" onclick="clickbox(muitoRuim)">Muito Ruim</li>
+                <span class="checkMark"></span>
+            </ul>
 
     <div>
         <h2>3- De modo geral, como você avalia a qualidade do atendimento ao cliente realizado por nossa empresa?</h2>
         <br>
-        <textarea name="resp" id="" cols="63" rows="10"></textarea>
+        <textarea name="resposta" id="" cols="63" rows="10"></textarea>
     </br>
         <input type="submit" value="enviar">
-    </div>
-  
+    </div>  
 </main>
-
 <footer>
     <p>Criado por Hedrik Bastos para o Desafio<a href="https://mscode.simonetti.com.br/"> <img src="./imagens/logo-mscode.png"  alt="ms code" target="_blank"></a></p>
 </footer>
-
 <script src="script.js"></script>
-
 </body>
 </html>
