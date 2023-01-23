@@ -257,7 +257,7 @@ footer{
     background:var(--cor4);
     padding: 5px 0;
     position: fixed;
-    bottom: 0;
+    bottom: 0%;
     width: 100%;
 }
 
