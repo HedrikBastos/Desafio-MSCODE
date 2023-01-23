@@ -12,7 +12,7 @@ inputSlider.onblur = (()=>{
     valorSlider.classList.remove("show");
 })
 
-//função para selecionar unico checkbox 
+//função para selecionar um unico checkbox 
 function clickbox(id){
     switch(id){
         case muitoBom:
